@@ -8,9 +8,7 @@
           <br />
           문의하실 사항이 있다면 연락주세요.
         </p>
-        <router-link to="mailto:gnsrbdi@naver.com"
-          >gnsrbdi@naver.com</router-link
-        >
+        <a href="mailto:gnsrbdi@naver.com">gnsrbdi@naver.com</a>
         <ul class="sns">
           <li>
             <router-link to="/"> </router-link>
