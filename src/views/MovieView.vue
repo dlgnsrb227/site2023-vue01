@@ -1,7 +1,7 @@
 <template>
   <ContTitle title="movie" />
-  <MovieSlider />
-  <MovieSearch />
+  <MovieSlider :movies="movies" />
+  <MovieSearch :onSearch="searchMovies" />
   <MovieTag />
   <MovieCont :movies="movies" />
 </template>
@@ -27,6 +27,17 @@ export default {
   setup() {
     const movies = ref([]);
 
+    const searchMovies = async (query) => {
+      await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=9be29262d25a4b248a7a8c73a358aa0d&query=${query}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          movies.value = result.results;
+        })
+        .catch((error) => console.log("error", error));
+    };
+
     const TopMovies = async () => {
       await fetch(
         "https://api.themoviedb.org/3/movie/popular?api_key=9be29262d25a4b248a7a8c73a358aa0d"
@@ -43,6 +54,7 @@ export default {
     return {
       movies,
       TopMovies,
+      searchMovies,
     };
   },
 };
