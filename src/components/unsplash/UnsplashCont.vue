@@ -20,3 +20,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.unsplash__cont {
+  ul {
+    column-count: 4;
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+</style>
