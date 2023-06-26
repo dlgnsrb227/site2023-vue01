@@ -1,16 +1,16 @@
 <template>
   <ContTitle title="movie" />
   <MovieSlider :movies="movies" />
-  <MovieSearch :onSearch="searchMovies" />
-  <MovieTag />
+  <!-- <MovieSearch :onSearch="searchMovies" /> -->
+  <!-- <MovieTag /> -->
   <MovieCont :movies="movies" />
 </template>
 
 <script>
 import ContTitle from "@/components/layout/ContTitle.vue";
 import MovieSlider from "@/components/movie/MovieSlider.vue";
-import MovieSearch from "@/components/movie/MovieSearch.vue";
-import MovieTag from "@/components/movie/MovieTag.vue";
+// import MovieSearch from "@/components/movie/MovieSearch.vue";
+// import MovieTag from "@/components/movie/MovieTag.vue";
 import MovieCont from "@/components/movie/MovieCont.vue";
 
 import { ref } from "vue";
@@ -19,8 +19,8 @@ export default {
   components: {
     ContTitle,
     MovieSlider,
-    MovieSearch,
-    MovieTag,
+    // MovieSearch,
+    // MovieTag,
     MovieCont,
   },
 
