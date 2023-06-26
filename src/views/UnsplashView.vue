@@ -1,6 +1,6 @@
 <template>
   <ContTitle title="unsplash" />
-  <UnsplashSlider />
+  <UnsplashSlider :images="images" />
   <UnsplashSearch />
   <UnsplashTag />
   <UnsplashCont :images="images" />

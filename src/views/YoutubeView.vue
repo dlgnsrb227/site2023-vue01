@@ -1,6 +1,6 @@
 <template>
   <ContTitle title="youtube" />
-  <YoutubeSlider />
+  <!-- <YoutubeSlider /> -->
   <YoutubeSearch />
   <YoutubeTag />
   <YoutubeCont :youtubes="youtubes" />
@@ -8,7 +8,7 @@
 
 <script>
 import ContTitle from "@/components/layout/ContTitle.vue";
-import YoutubeSlider from "@/components/youtube/YoutubeSlider.vue";
+// import YoutubeSlider from "@/components/youtube/YoutubeSlider.vue";
 import YoutubeSearch from "@/components/youtube/YoutubeSearch.vue";
 import YoutubeTag from "@/components/youtube/YoutubeTag.vue";
 import YoutubeCont from "@/components/youtube/YoutubeCont.vue";
@@ -18,7 +18,7 @@ import { ref } from "vue";
 export default {
   components: {
     ContTitle,
-    YoutubeSlider,
+    // YoutubeSlider,
     YoutubeSearch,
     YoutubeTag,
     YoutubeCont,
