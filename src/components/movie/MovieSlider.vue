@@ -61,6 +61,7 @@ export default {
 <style lang="scss">
 .movie__slider {
   height: 70vh;
+  margin-bottom: 100px;
 
   img {
   }

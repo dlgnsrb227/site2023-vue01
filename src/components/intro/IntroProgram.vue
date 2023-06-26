@@ -270,7 +270,7 @@
   }
 
   .intro__program__desc {
-    margin-top: 40px;
+    margin: 40px 0 100px;
     padding: 0 30px;
     span {
       font-size: 24px;
