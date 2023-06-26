@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(image, index) in images" :key="index">
         <a :href="`https://unsplash.com/photos/${image.id}`">
-          <img :src="image.urls.thumb" :alt="image.alt_description" />
+          <img :src="image.urls.regular" :alt="image.alt_description" />
         </a>
       </li>
     </ul>

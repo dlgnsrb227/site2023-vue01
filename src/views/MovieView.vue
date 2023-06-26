@@ -26,15 +26,18 @@ export default {
 
   setup() {
     const movies = ref([]);
+    const searchs = ref([]);
+    const search = ref("avengers");
 
     const TopMovies = async () => {
       await fetch(
-        "https://api.themoviedb.org/3/movie/popular?api_key=9be29262d25a4b248a7a8c73a358aa0d"
+        `https://api.themoviedb.org/3/movie/popular?api_key=9be29262d25a4b248a7a8c73a358aa0d&query=${search.value}`
       )
         .then((response) => response.json())
         .then((result) => {
-          console.log(result);
           movies.value = result.results;
+          searchs.value = result.results;
+          console.log(searchs);
         })
         .catch((error) => console.log("error", error));
     };
@@ -42,6 +45,7 @@ export default {
 
     return {
       movies,
+      searchs,
       TopMovies,
     };
   },
